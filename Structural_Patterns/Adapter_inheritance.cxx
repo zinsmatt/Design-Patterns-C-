@@ -6,7 +6,7 @@
 using namespace std;
 
 /**
- *  Adapter (by object composition)
+ *  Adapter (by class inheritance)
  * 
  * - Wrap an object into an adapter to have a target interface
  * 
@@ -27,22 +27,18 @@ class Target
 class ToAdapt
 {
     public:
-        string specialRequest() const {
+        virtual string specialRequest() const {
             return "XXXSpecial request my by the object to adaptXXX";
         }
 };
 
 
-class Adapter : public Target
+class Adapter : public Target, private ToAdapt
 {
-    private:
-        ToAdapt *to_adapt_ = nullptr;
-
     public:
-        Adapter(ToAdapt *to_adapt) : to_adapt_(to_adapt) {}
 
         virtual string request() const override {
-            auto res = to_adapt_->specialRequest();
+            auto res = ToAdapt::specialRequest();
             return res.substr(3, res.size()-6);
         }
 };
@@ -59,7 +55,7 @@ int main() {
     cout << "to adapt special request: " << to_adapt.specialRequest() << "\n\n";
 
 
-    Adapter adapter(&to_adapt);
+    Adapter adapter;
     cout << "to adapt adatped request: " << adapter.request() << "\n\n";
 
 
