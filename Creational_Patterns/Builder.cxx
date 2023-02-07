@@ -7,8 +7,14 @@ using namespace std;
 /**
  *  Builder:
  * 
+ * - useful to create complex objects. It avoids to have a large nb of subclasses: House, HouseWithGarden, HouseWithGardenNoPool, HouseWithGarendWithPool, HouseNoGardenWithPool, ...
+ * - Avoids to have large ugly constructors: House(windows, doors, rooms, roof, hasGarage, hasGarden, hasSwimmingPool, ... )
+ *
+ * - can be used with a Director which contains a recipe to build certain type of objects
  * 
  */
+
+
 
 class Product1
 {
@@ -23,8 +29,11 @@ class Product1
 
 };
 
+
+// Builder interface
 class Builder
 {
+    // No base product because the concrete builder can build different types of unrelated objects
     public:
         virtual ~Builder() {}
 
