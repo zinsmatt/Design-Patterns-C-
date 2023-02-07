@@ -106,7 +106,7 @@ class Director
 
 
 int main() {
-    std::cout << "Builder\n";
+    std::cout << "Builder\n\n";
 
     Director director;
 

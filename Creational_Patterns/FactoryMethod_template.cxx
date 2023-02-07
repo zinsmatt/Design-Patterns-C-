@@ -72,7 +72,7 @@ class ConcreteProductCreator : public Creator
 
 
 int main() {
-    std::cout << "Factory Method (templated version)\n";
+    std::cout << "Factory Method (templated version)\n\n";
 
     Creator* creator1 = new ConcreteProductCreator<ConcreteProduct1>();
     creator1->doSomeOperation();

@@ -51,7 +51,7 @@ Singleton_Database* Singleton_Database::instance_ = nullptr;
 
 
 int main() {
-    std::cout << "Singleton\n";
+    std::cout << "Singleton\n\n";
 
     Singleton_Database *db = Singleton_Database::GetInstance("losc.db");
 

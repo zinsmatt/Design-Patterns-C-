@@ -114,7 +114,7 @@ class Composite : public Component
 int main() {
     srand(time(NULL));
 
-    std::cout << "Composite\n";
+    std::cout << "Composite\n\n";
 
     Component *root = new Composite;
 

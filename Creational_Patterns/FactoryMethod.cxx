@@ -82,7 +82,7 @@ class ConcreteProduct2Creator : public Creator
 
 
 int main() {
-    std::cout << "Factory Method\n";
+    std::cout << "Factory Method\n\n";
 
     Creator* creator1 = new ConcreteProduct1Creator;
     creator1->doSomeOperation();

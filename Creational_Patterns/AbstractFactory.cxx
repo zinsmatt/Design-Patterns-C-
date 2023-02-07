@@ -104,7 +104,7 @@ class ConcreteFactory2 : public AbstractFactory
 
 
 int main() {
-    std::cout << "Abstract Factory\n";
+    std::cout << "Abstract Factory\n\n";
 
     AbstractFactory *fact = new ConcreteFactory1();
 
