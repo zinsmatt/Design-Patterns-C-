@@ -28,7 +28,8 @@ Chain_of_Responsability
 Iterator
 Memento
 State
-Template_Method)
+Template_Method
+Command)
 
 
 message("\nCreational patterns:")
