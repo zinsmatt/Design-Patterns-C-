@@ -29,7 +29,8 @@ Iterator
 Memento
 State
 Template_Method
-Command)
+Command
+Mediator)
 
 
 message("\nCreational patterns:")
