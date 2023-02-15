@@ -30,7 +30,8 @@ Memento
 State
 Template_Method
 Command
-Mediator)
+Mediator
+Observer)
 
 
 message("\nCreational patterns:")
