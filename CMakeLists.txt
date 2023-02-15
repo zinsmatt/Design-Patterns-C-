@@ -31,7 +31,8 @@ State
 Template_Method
 Command
 Mediator
-Observer)
+Observer
+Strategy)
 
 
 message("\nCreational patterns:")
